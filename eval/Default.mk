@@ -68,7 +68,7 @@ obj/%-dthread.o: %.cpp
 	$(CXX) $(DTHREAD_CFLAGS) -c $< -o $@ -I$(HOME)/include
 
 ### FIXME, put the 
-$(TEST_NAME)-dthread: $(DTHREAD_OBJS) $(DTHREADS_HOME)/src/libdthreads.so
+$(TEST_NAME)-dthread: $(DTHREAD_OBJS)
 	$(CC) $(DTHREAD_CFLAGS) -o $@ $(DTHREAD_OBJS) $(DTHREAD_LIBS)
 
 eval-dthread: $(TEST_NAME)-dthread
