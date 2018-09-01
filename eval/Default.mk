@@ -77,7 +77,7 @@ eval-dthread: $(TEST_NAME)-dthread
 
 ############ coredet generic defines ############
 
-COREDET_CFLAGS = -DENABLE_DMP
+COREDET_CFLAGS = #-DENABLE_DMP
 COREDET_LIBS += $(LIBS) -lstdc++ -lpthread -ldl
 COREDET_OPT = -load=libLLVMDataStructure.so -load=libLLVMMakeDeterministic.so -basicaa -libcall-aa -anders-aa -ds-aa -std-compile-opts -makedeterministic -dmp=true -no-pthreads
 
