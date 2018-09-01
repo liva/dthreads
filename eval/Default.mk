@@ -50,7 +50,7 @@ eval-pthread: $(TEST_NAME)-pthread
 ############ dthread builders ############
 
 DTHREAD_CFLAGS = $(CFLAGS) -DNDEBUG
-DTHREAD_LIBS += $(LIBS) -rdynamic $(DTHREADS_HOME)/src/libdthreads64.so -ldl
+DTHREAD_LIBS += $(LIBS) -ldthread -dl
 #DTHREAD_LIBS += $(LIBS) -rdynamic $(DTHREADS_HOME)/src/libdthreads.so -ldl
 
 DTHREAD_OBJS = $(addprefix obj/, $(addsuffix -dthread.o, $(TEST_FILES)))
