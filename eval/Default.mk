@@ -4,8 +4,10 @@ NCORES ?= 8
 
 #CC = gcc -m32 -march=core2 -mtune=core2
 #CXX = g++ -m32 -march=core2 -mtune=core2
-CC = gcc -march=core2 -mtune=core2
-CXX = g++ -march=core2 -mtune=core2
+#CC = gcc -march=core2 -mtune=core2
+#CXX = g++ -march=core2 -mtune=core2
+CC = gcc
+CXX = g++
 CFLAGS += -O5
 
 CONFIGS = pthread dthread dmp_o dmp_b
